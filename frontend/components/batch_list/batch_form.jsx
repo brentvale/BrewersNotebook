@@ -7,7 +7,7 @@ class BatchForm extends React.Component {
       this.state = {
 		  nameOfBeer: "",
 		  typeOfBrewing: "",
-		  gallonsToBrew: 0,
+		  gallonsToBrew: 5,
 		  currentStep: 0
       };
       this.handleSubmit = this.handleSubmit.bind(this);
@@ -20,7 +20,7 @@ class BatchForm extends React.Component {
       this.setState({
 		  nameOfBeer: "",
 		  typeOfBrewing: "",
-		  gallonsToBrew: 0
+		  gallonsToBrew: 5
       });
     }
 
