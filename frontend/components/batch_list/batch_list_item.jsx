@@ -8,7 +8,7 @@ class BatchListItem extends React.Component{
     return (
       <div id={id}>
           	<p>name of beer: {name_of_beer}</p>
-			<p>gallons to brew: {gallons}</p>
+						<p>gallons to brew: {gallons}</p>
           	
           	<p>type of brewing: {type_of_brewing}</p>
       </div>

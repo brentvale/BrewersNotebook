@@ -21,11 +21,10 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-gem 'devise', '~> 4.2'
+gem 'devise'
 
 #awesome print for data formatting in the console
 gem 'awesome_print', require: "ap"
-
 
 group :development, :test do
   gem 'better_errors'
