@@ -10,7 +10,6 @@ Create Tutorial/Workflow for making first batch of beer
 		Consider: first use is a step by step walk through:
 				//1. Are you ready to brew a batch?  Or just learning about the site?
 				//1a. Ready to brew -> takes the user through the process step by step, with 					ability to skip steps.
-				//1b.
 
 Phase 2: 
 Users create their own "methods" of brewing ( phase 1 includes the standardized method provided by morebeer )
@@ -20,3 +19,6 @@ Phase 3: follow up with users -> how was the taste of the beer you brewed.  Data
 
 Phase 4: Tie in to local breweries to offer discounts when you clone their beers (find list of locations that offer the recipes to the clones of their beers).  Have restaurant of brewery offer deal of: visit brewery within 3 weekends of 60 days after beer has been brewed (or whatever the optimal period is.  receive 6 free beers to do a side by side comparison.  book the weekend.  change the weekend.  etc. )
 
+Ways to Make Money:
+1. Ordering beer ingredients through app
+2. Referral fee/ comission from groups sent to breweries
