@@ -1,5 +1,6 @@
 class Api::BatchesController < ApplicationController
   def index 
-    render json: {batches: Batch.all}
+    batches = current_user.batches
+    render json: {batches: batches}
   end
 end
