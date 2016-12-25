@@ -9,6 +9,11 @@ user = User.create( first_name: "brent",
                     last_name: "vale", 
                     password: "password", 
                     email: "brentvale@gmail.com")
+                    
+user_two = User.create( first_name: "Jay", 
+                    last_name: "Perryman", 
+                    password: "password", 
+                    email: "jeperryman80@gmail.com")
 Batch.create( name_of_beer: "GumballHead - Batch 1", 
               type_of_brewing: "extract", 
               gallons: 10,
@@ -21,3 +26,16 @@ Batch.create( name_of_beer: "GumballHead - Batch 3",
               type_of_brewing: "extract", 
               gallons: 4,
               user_id: user.id)
+              
+Batch.create( name_of_beer: "GumballHead - Batch 1", 
+              type_of_brewing: "extract", 
+              gallons: 5,
+              user_id: user_two.id)
+Batch.create( name_of_beer: "GumballHead - Batch 2", 
+              type_of_brewing: "extract", 
+              gallons: 5,
+              user_id: user_two.id)
+Batch.create( name_of_beer: "GumballHead - Batch 3", 
+              type_of_brewing: "extract", 
+              gallons: 5,
+              user_id: user_two.id)
