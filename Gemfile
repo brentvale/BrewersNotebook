@@ -26,7 +26,6 @@ gem 'devise'
 #awesome print for data formatting in the console
 gem 'awesome_print', require: "ap"
 
-
 group :development, :test do
   gem 'better_errors'
   gem 'binding_of_caller'
