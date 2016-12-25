@@ -5,6 +5,19 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-Batch.create(name_of_beer: "GumballHead - Batch 1", type_of_brewing: "extract", gallons: 10)
-Batch.create(name_of_beer: "GumballHead - Batch 2", type_of_brewing: "extract", gallons: 5)
-Batch.create(name_of_beer: "GumballHead - Batch 3", type_of_brewing: "extract", gallons: 4)
+user = User.create( first_name: "brent", 
+                    last_name: "vale", 
+                    password: "password", 
+                    email: "brentvale@gmail.com")
+Batch.create( name_of_beer: "GumballHead - Batch 1", 
+              type_of_brewing: "extract", 
+              gallons: 10,
+              user_id: user.id)
+Batch.create( name_of_beer: "GumballHead - Batch 2", 
+              type_of_brewing: "extract", 
+              gallons: 5,
+              user_id: user.id)
+Batch.create( name_of_beer: "GumballHead - Batch 3", 
+              type_of_brewing: "extract", 
+              gallons: 4,
+              user_id: user.id)

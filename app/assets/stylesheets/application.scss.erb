@@ -1,0 +1,67 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ 
+//SCREEN SIZES
+$screen-lg-min: 1200px;
+$screen-md-min: 992px;
+$screen-sm-min: 768px;
+ 
+#landingBackgroundImage{
+	background-image: url("<%= asset_path('bg_beer_scene_desktop_low_res.jpg') %>");
+	background-repeat: no-repeat;
+	background-size:cover;
+	height:600px;
+	height:100vh;
+}
+.devise-form-container{
+	background-color: rgba(255,255,255,0.7);
+	border-radius: 5px;
+	padding:15px;
+	position:absolute;
+	left: 300px;
+	top:  100px;
+}
+.display-none{
+	display:none;
+}
+
+//MEDIA QUERIES
+
+/* Small devices (tablets, 768px and down) */
+@media (max-width: $screen-sm-min) { 
+	#landingBackgroundImage{
+		background-image: url("<%= asset_path('bg_beer_scene_low_res.jpg') %>");
+	}
+	.devise-form-container{
+		left: 30%;
+	}
+}
+
+/* Medium devices (desktops, 992px and down) */
+@media (max-width: $screen-md-min) { 
+
+}
+
+/* Large devices (large desktops, 1200px and down) */
+@media (max-width: $screen-lg-min) { 
+	
+}
+
+@media (min-width: $screen-lg-min) { 
+	.devise-form-container{
+		left: 27%;
+	}
+}

@@ -4,6 +4,7 @@ class CreateBatches < ActiveRecord::Migration
       t.string :name_of_beer, null: false
       t.string :type_of_brewing, null: false #extract, brew-in-bag, all-grain
       t.integer :gallons, null: false
+      t.integer :user_id, null: false
       
       t.timestamps null: false
     end

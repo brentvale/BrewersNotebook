@@ -8,10 +8,10 @@ const CustomNav = ({ batches }) => {
 	));
 	
   return(
-    <Navbar inverse collapseOnSelect>
+    <Navbar inverse collapseOnSelect style={{borderRadius: "0px"}}>
       <Navbar.Header>
         <Navbar.Brand>
-          <a href="#/my_beers">BrewersNotebook</a>
+          <a href="#/">BrewersNotebook</a>
         </Navbar.Brand>
         <Navbar.Toggle />
       </Navbar.Header>
@@ -21,6 +21,12 @@ const CustomNav = ({ batches }) => {
           <NavDropdown eventKey={3} title="My Beers" id="basic-nav-dropdown">
             {listItems}
           </NavDropdown>
+        </Nav>
+        <Nav pullRight>
+          <NavItem  href="/users/sign_out"
+                    rel="nofollow" 
+                    data-method="delete">Sign Out</NavItem>
+          
         </Nav>
       </Navbar.Collapse>
     </Navbar>
