@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   
   namespace :api do 
     resources :batches, only: [:index]
+    resources :users, only: [:update, :show]
+    get '/users/current_user', to: 'users#current_logged_in_user'
   end
   
   get '/terms_of_service', to: 'static_pages#terms_of_service'
