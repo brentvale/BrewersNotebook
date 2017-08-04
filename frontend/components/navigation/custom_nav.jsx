@@ -5,6 +5,7 @@ export default class CustomNav extends Component{
 	componentDidMount(){
 		this.props.requestCurrentUser();
 	}
+	
 	render(){
 		const {batches, currentUser} = this.props;
 		const listItems = batches.map((batch, idx) => (

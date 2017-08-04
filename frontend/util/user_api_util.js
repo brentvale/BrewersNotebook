@@ -11,8 +11,8 @@ export const fetchCurrentUser = () => (
 
 export const updateCurrentUser = (formData) => (
 	$.ajax({
-		    method: 'PATCH',
-		    url: `/api/users/${formData.userId}`,
-				data: formData
-		  })
+    method: 'PATCH',
+    url: `/api/users/${formData.userId}`,
+		data: formData
+  })
 );

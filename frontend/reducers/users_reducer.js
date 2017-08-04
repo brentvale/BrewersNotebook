@@ -6,7 +6,6 @@ const usersReducer = (state = {}, action) => {
   let newState = merge({}, state);
   switch(action.type) {
     case UserActions.RECEIVE_CURRENT_USER:
-			debugger
 			newState["currentUser"] = action.currentUser;
 			return newState;
     default:

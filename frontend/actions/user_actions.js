@@ -19,10 +19,9 @@ export function updateCurrentUser(formData){
 //SYNC ACTIONS
 
 export const receiveCurrentUser = currentUser => {
-	debugger 
 	return {
-  type: RECEIVE_CURRENT_USER,
-  currentUser: currentUser
+  	type: RECEIVE_CURRENT_USER,
+  	currentUser: currentUser
 	}
   
 };

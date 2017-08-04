@@ -11,6 +11,7 @@ const Root = ({ store }) => (
     <Router history={hashHistory}>
       <Route path="/" component={Main}>
 				<IndexRoute component={BatchListContainer} />
+				<Route path="batches" component={BatchListContainer} />
 				<Route path="batches/:name_of_beer" component={BatchShowContainer} />
       </Route>
     </Router>
