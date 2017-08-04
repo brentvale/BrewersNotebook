@@ -13,29 +13,107 @@
  *= require_tree .
  *= require_self
  */
+
+//COLORS
+
+//GRAYS
+$alabaster: #f9f9f9; //white-ish
+$wild-sand: #f4f4f4; //white-touch of gray
+$alto: #d3d3d3; //unclickable gray color
+$silver: #b8b8b8; //good for alto:hover
+$boulder: #767676; //darker gray
+$tundora: #363636; //darkest gray
+
+$carnation: #FD5C63; //pink;
+$light-carnation: #fff5f6;
+$dark-carnation: #e1494f;
+$neon-green: #39FF14;
  
 //SCREEN SIZES
 $screen-lg-min: 1200px;
 $screen-md-min: 992px;
 $screen-sm-min: 768px;
  
-#landingBackgroundImage{
+#main{
+	font-family: 'Raleway', sans-serif;
+}
+#landingBg{
 	background-image: url("<%= asset_path('bg_beer_scene_desktop_low_res.jpg') %>");
 	background-repeat: no-repeat;
 	background-size:cover;
 	height:600px;
 	height:100vh;
-}
-.devise-form-container{
-	background-color: rgba(255,255,255,0.7);
-	border-radius: 5px;
-	padding:15px;
-	position:absolute;
-	left: 300px;
-	top:  100px;
+	padding:8em 0em 0em 0em;
 }
 .display-none{
 	display:none;
+}
+h2{
+	font-size: 1.2em !important;
+	span{
+		font-weight:800;
+	}
+}
+
+//DEVISE FORMS
+.registration-form{
+	border:1px solid $boulder;
+	border-radius:3px;
+	color: $boulder;
+	height:3.5em;
+	margin: 0.2em 1em 0.2em 0em;
+	padding:0.5em;
+	width:100%;
+}
+#signUpContainer, #logInContainer{
+	background-color: white;
+	border-radius: 4px;
+	margin-bottom: 10em;
+	max-width: 500px;
+	padding:1em;
+	width: 100%;
+	h2{
+		text-align:center;
+	}
+}
+#new_user, #new_session{
+	input{
+		background-size:40px 171px;
+		background-image: url("<%= asset_path('form_icons.png') %>");
+		background-repeat: no-repeat;
+		font-size:16px;
+		letter-spacing:1.3px;
+		padding-right: 4em;
+	}
+	#jobDescription, #addressLineOne, #addressLineTwo, #city, #state, #zip{
+		background-image: none;
+	}
+	label{
+		font-size: 16px;
+		font-weight:normal;
+		letter-spacing: 1.3px;
+		padding: 0.5em;
+	}
+}
+#forgotPasswordLink{
+	border-bottom: 1px solid #fff;
+	color: #09979c;
+	float:right;
+	font-size:0.8em;
+	margin-bottom:1em;
+	margin-top:0.4em;
+}
+#forgotPasswordLink:hover{
+	border-bottom: 1px solid #09979c;
+}
+#firstName, #lastName{
+	background-position:right 16px;
+}
+#emailAddress{
+	background-position:right -34px;
+}
+#password, #confirmPassword{
+	background-position:right -84px;
 }
 
 //MEDIA QUERIES
