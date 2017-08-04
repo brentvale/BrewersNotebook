@@ -2,8 +2,8 @@ import { connect } from 'react-redux';
 import * as UserActions from '../../actions/user_actions';
 import { getCurrentUser } from '../../reducers/selectors';
 import { requestCurrentUser } from '../../actions/user_actions';
-import Home from './home';
 
+import Brew from './brew';
 
 const mapStateToProps = state => ({
 	currentUser: getCurrentUser(state)
@@ -14,6 +14,6 @@ const mapDispatchToProps = dispatch => ({
 });
 
 export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Home);
+	mapStateToProps,
+	mapDispatchToProps
+)(Brew);

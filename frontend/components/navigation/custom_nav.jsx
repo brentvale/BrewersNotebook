@@ -14,7 +14,7 @@ export default class CustomNav extends Component{
 		const currentUserDisplay = currentUser ? <NavItem >{`${currentUser.first_name} ${currentUser.last_name}`}</NavItem> : "";
 		console.log(`${currentUser}`)
 	  return(
-	    <Navbar inverse collapseOnSelect style={{borderRadius: "0px"}}>
+	    <Navbar inverse fixedTop collapseOnSelect style={{borderRadius: "0px"}}>
 	      <Navbar.Header>
 	        <Navbar.Brand>
 	          <a href="#/">BrewersNotebook</a>
