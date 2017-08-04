@@ -1,20 +1,20 @@
 import React, {Component} from 'react';
-import {Navbar, Nav, NavItem, NavDropdown, MenuItem} from 'react-bootstrap';
 
-export default class CustomNav extends Component{
+import {Navbar, Nav, NavItem, NavDropdown, MenuItem} from 'react-bootstrap';
+import {withRouter, Link} from 'react-router';
+
+class CustomNav extends Component{
 	componentDidMount(){
 		this.props.requestCurrentUser();
 	}
 	
 	render(){
 		const {batches, currentUser} = this.props;
-		const listItems = batches.map((batch, idx) => (
-		    <MenuItem key={idx} href={"#/batches/" + batch.name_of_beer}>{batch.name_of_beer}</MenuItem>
-		));
+
 		const currentUserDisplay = currentUser ? <NavItem >{`${currentUser.first_name} ${currentUser.last_name}`}</NavItem> : "";
-		console.log(`${currentUser}`)
+		
 	  return(
-	    <Navbar inverse fixedTop collapseOnSelect style={{borderRadius: "0px"}}>
+	    <Navbar inverse fixedTop style={{borderRadius: "0px"}}>
 	      <Navbar.Header>
 	        <Navbar.Brand>
 	          <a href="#/">BrewersNotebook</a>
@@ -24,9 +24,15 @@ export default class CustomNav extends Component{
     
 	      <Navbar.Collapse>
 	        <Nav>
-	          <NavDropdown eventKey={3} title="My Beers" id="basic-nav-dropdown">
-	            {listItems}
-	          </NavDropdown>
+	          <NavItem href="#/brew">
+							Brew Now
+	          </NavItem>
+	          <NavItem href="#/batches">
+							My Beers
+	          </NavItem>
+	          <NavItem href="#/edit_batches">
+							Prepare
+	          </NavItem>
 	        </Nav>
 	        <Nav pullRight>
 						{currentUserDisplay}
@@ -40,3 +46,4 @@ export default class CustomNav extends Component{
 	  ) 
 	}
 }
+export default withRouter(CustomNav);
