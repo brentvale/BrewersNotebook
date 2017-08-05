@@ -221,10 +221,10 @@ input.image-upload{
 		color: $boulder;
 	}
 	div i.fa-user-circle-o{
-		color: $silver;
+		color: $alto;
 	}
 	div:hover i.fa-user-circle-o{
-		color: $boulder;
+		color: $silver;
 	}
 	.fa-user-circle-o.large{
 		font-size: 120px;
@@ -318,8 +318,110 @@ input.image-upload{
 .page-block-padded{
 	padding: 0 1em 1em 1em;
 }
-//MEDIA QUERIES
 
+//FIREWORKS
+#birthdaySign{
+	animation: color-sign 2s infinite;
+}
+@keyframes color-sign{
+	0%{
+		color: red;
+	}
+	33%{
+		color: green;
+	}
+	66%{
+		color: blue;
+	}
+	100%{
+		color: red;
+	}
+}
+#timersContainer{
+	color: white;
+	width: 250px;
+	p{
+		padding:0px;
+		text-align:right;
+	}
+	p.or-block{
+		padding:0px 0px 0px 150px;
+		text-align:center;
+	}
+	span{
+		color: yellow;
+	}
+}
+#fireworksModalBody{
+	background-color: black;
+	height: 600px;
+	text-align:center;
+}
+#firstFirework{
+	position:absolute;
+	left: 45%;
+	bottom: 10%;
+	animation: launch-firework 2s forwards;
+}
+@keyframes launch-firework{
+	0%{
+		bottom: 10%;
+	}
+	100%{
+		bottom: 80%;
+	}
+}
+.firework{
+	background-image: url("<%= asset_path('fireworks_sprite_for_web.png') %>");
+	background-size: 300% 600%;
+	display: inline-block;
+	height: 50px;
+	width: 50px;
+}
+$firework-animation-timing: 1s;
+.firework-1{
+	animation: $firework-animation-timing steps(6) firework-one;
+}
+.firework-1-continuous{
+	animation: $firework-animation-timing steps(6) firework-one infinite;
+}
+.firework-1, .firework-1-continuous{
+	background-position:0 0;
+}
+@keyframes firework-one{
+	to{
+		background-position: 0px -300px;
+	}
+}
+.firework-2{
+	animation: $firework-animation-timing steps(6) firework-two;
+}
+.firework-2-continuous{
+	animation: $firework-animation-timing steps(6) firework-two infinite;
+}
+.firework-2, .firework-2-continuous{
+	background-position: 50px 0px;
+}
+@keyframes firework-two{
+	to{
+		background-position: 50px -300px;
+	}
+}
+.firework-3{
+	animation: $firework-animation-timing steps(6) firework-three;
+}
+.firework-3-continuous{
+	animation: $firework-animation-timing steps(6) firework-three infinite;
+}
+.firework-3, .firework-3-continuous{
+	background-position:100px 0px;
+}
+@keyframes firework-three{
+	to{
+		background-position: 100px -300px;
+	}
+}
+//MEDIA QUERIES
 /* Small devices (tablets, 768px and down) */
 @media (max-width: $screen-sm-min) { 
 	#landingBackgroundImage{

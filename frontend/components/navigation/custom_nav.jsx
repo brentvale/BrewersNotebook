@@ -3,13 +3,32 @@ import React, {Component} from 'react';
 import {Navbar, Nav, NavItem, NavDropdown, MenuItem} from 'react-bootstrap';
 import {withRouter, Link} from 'react-router';
 
+import {Button, Modal} from 'react-bootstrap';
+import BirthdayContainer from './birthday_container';
+
 class CustomNav extends Component{
+	constructor(){
+		super();
+		this.state = {
+			showModal: false
+		}
+		this.close = this.close.bind(this);
+	}
+	
 	componentDidMount(){
 		this.props.requestCurrentUser();
+		this.setState({showModal: true});
+	}
+	
+	close(){
+		this.setState({showModal: false});
 	}
 	
 	render(){
 		const {batches, currentUser} = this.props;
+		if(!currentUser){
+			return <Navbar inverse fixedTop style={{borderRadius: "0px"}}></Navbar>
+		}
 
 		const currentUserDisplay = currentUser ? <NavItem href="#/edit_profile">{`${currentUser.first_name} ${currentUser.last_name}`}</NavItem> : "";
 		
@@ -42,6 +61,14 @@ class CustomNav extends Component{
           
 	        </Nav>
 	      </Navbar.Collapse>
+						
+				<Modal show={this.state.showModal} onHide={this.close}>
+	        <Modal.Header closeButton>
+	        </Modal.Header>
+	        <Modal.Body id="fireworksModalBody">
+						<BirthdayContainer currentUser={currentUser}/>
+	        </Modal.Body>
+	      </Modal>
 	    </Navbar>
 	  ) 
 	}
