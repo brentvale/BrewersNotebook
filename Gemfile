@@ -25,6 +25,9 @@ gem 'devise'
 
 gem 'bootstrap-sass', '~> 3.3.6'
 
+gem 'paperclip'
+gem 'font-awesome-sass'
+
 #awesome print for data formatting in the console
 gem 'awesome_print', require: "ap"
 

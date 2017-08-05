@@ -1,8 +1,10 @@
-const path = require("path");
+const webpack = require('webpack');
+const path = require('path');
 
 module.exports = {
+  context: __dirname,
   entry: "./frontend/brewers_notebook_app.jsx",
-	output: {
+  output: {
     path: path.join(__dirname, 'app', 'assets', 'javascripts'),
     filename: "bundle.js"
   },

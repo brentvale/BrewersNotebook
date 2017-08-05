@@ -60,7 +60,7 @@ export default class EditBatch extends Component{
 		return(
 			<div id="editBatchContainer" className="center-block">
 				<div id="navInfoBar">
-					<div onClick={() => {this.toggleAll()}}>{toggleButtonText}</div>
+					<div onClick={() => {this.toggleAll()}} className="hand-on-hover">{toggleButtonText}</div>
 				</div>
 				<div style={{marginTop: "120px"}}>
 					{steps.map((step, idx) => {

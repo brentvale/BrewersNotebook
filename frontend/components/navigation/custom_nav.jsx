@@ -11,7 +11,7 @@ class CustomNav extends Component{
 	render(){
 		const {batches, currentUser} = this.props;
 
-		const currentUserDisplay = currentUser ? <NavItem >{`${currentUser.first_name} ${currentUser.last_name}`}</NavItem> : "";
+		const currentUserDisplay = currentUser ? <NavItem href="#/edit_profile">{`${currentUser.first_name} ${currentUser.last_name}`}</NavItem> : "";
 		
 	  return(
 	    <Navbar inverse fixedTop style={{borderRadius: "0px"}}>

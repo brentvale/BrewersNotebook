@@ -9,6 +9,7 @@ import HomeContainer from './home/home_container';
 
 import BrewContainer from './brew/brew_container';
 import EditBatchContainer from './batch_list/edit_batch_container';
+import EditUserContainer from './user/edit_user_container'
 
 const Root = ({ store }) => (
   <Provider store={store}>
@@ -19,6 +20,7 @@ const Root = ({ store }) => (
 				<Route path="edit_batches" component={EditBatchContainer} />
 				<Route path="batches" component={BatchListContainer} />
 				<Route path="batches/:name_of_beer" component={BatchShowContainer} />
+				<Route path="edit_profile" component={EditUserContainer} />
       </Route>
     </Router>
   </Provider>
