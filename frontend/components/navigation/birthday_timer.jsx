@@ -59,7 +59,8 @@ export default class BirthdayTimer extends Component{
 					<p><span>{this.numberWithCommas(seconds)}</span> seconds old</p>
 					<p className="or-block">or</p>
 					<p><span>{this.numberWithCommas(miliSeconds)}</span> mili-seconds old</p>
-			
+					<br />
+					Someone better get this guy a beer!
 				
 				
 				

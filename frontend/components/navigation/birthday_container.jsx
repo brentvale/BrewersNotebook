@@ -28,9 +28,6 @@ export default class BirthdayContainer extends Component{
 																				<FireWork klass="firework-1" firstTimeout={200}/>
 																				<FireWork klass="firework-2" firstTimeout={250}/>
 																				<FireWork klass="firework-3" firstTimeout={300}/>
-																				<FireWork klass="firework-1" firstTimeout={350}/>
-																				<FireWork klass="firework-2" firstTimeout={400}/>
-																				<FireWork klass="firework-3" firstTimeout={450}/>
 																				<h1 id="birthdaySign">Happy Birthday {currentUser.first_name}!!</h1>
 																				<BirthdayTimer />
 																			</div> : <div id="firstFirework" className="firework"></div>;
