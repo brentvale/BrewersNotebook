@@ -12,18 +12,26 @@ export default class FireWork extends Component{
 	componentDidMount(){
 		let that = this;
 		const timeout = this.props.firstTimeout;
-		setTimeout(() => {
+		
+		this.firstTimeout = setTimeout(() => {
 			that.setState({animating: false});
-			setTimeout(() => {
+			this.secondTimeout = setTimeout(() => {
 				that.setState({animating: true});
 			}, timeout)
 		}, 1000);
 		
 		const randomTimeout = Math.floor(Math.random()*1000 + 2500);
-		setTimeout(() => {
+		
+		this.groupAnimateTimeout = setTimeout(() => {
 			that.setState({completedIntroAnimation: true});
 		}, randomTimeout)
 		this.setState({animating: true});
+	}
+	
+	componentWillUnmount(){
+		clearTimeout(this.firstTimeout);
+		clearTimeout(this.secondTimeout);
+		clearTimeout(this.groupAnimateTimeout);
 	}
 	
 	render(){

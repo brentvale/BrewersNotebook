@@ -8,11 +8,16 @@ export default class BirthdayTimer extends Component{
 			nowTime: null
 		}
 		this.numberWithCommas = this.numberWithCommas.bind(this);
+		this.startTime = this.startTime.bind(this);
 	}
 	
 	componentDidMount(){
 		this.startTime();
 		this.setState({birthday: new Date(1956, 8, 5), nowTime: new Date()});
+	}
+	
+	componentWillUnmount(){
+		clearInterval(this.timeInterval);
 	}
 	
 	startTime(){
